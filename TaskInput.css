@@ -1,0 +1,69 @@
+.task-input-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.task-input {
+  flex: 1;
+  padding: 14px 22px;
+  border: 2px solid #F4C5D0;
+  background: #FFFFFF;
+  border-radius: 25px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  color: #BD8197;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(244, 197, 208, 0.1);
+}
+
+.task-input::placeholder {
+  color: #D4A5B5;
+}
+
+.task-input:focus {
+  border-color: #BD8197;
+  box-shadow: 0 4px 12px rgba(244, 197, 208, 0.2);
+  background: #FFF8E9;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F4C5D0 0%, #E8A5B8 100%);
+  border: none;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(244, 197, 208, 0.3);
+  flex-shrink: 0;
+}
+
+.add-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(244, 197, 208, 0.4);
+}
+
+.add-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+  .task-input {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .add-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+}

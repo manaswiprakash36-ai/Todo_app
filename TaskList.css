@@ -1,0 +1,161 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #FFF8E9;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #F4C5D0;
+  border-radius: 10px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #D4A5B5;
+  font-size: 14px;
+  padding: 30px 20px;
+  font-style: italic;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #FFF0F5;
+  border: 2px solid #F4C5D0;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.task-item:hover {
+  background: #F8DCE2;
+  box-shadow: 0 4px 12px rgba(244, 197, 208, 0.15);
+  transform: translateY(-2px);
+}
+
+.task-checkbox {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #F4C5D0;
+  flex-shrink: 0;
+}
+
+.task-checkbox:checked {
+  accent-color: #BD8197;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  color: #BD8197;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #D4A5B5;
+  opacity: 0.7;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  width: 28px;
+  height: 28px;
+  background: #FFC107;
+  border: none;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.edit-btn:hover {
+  background: #FFB300;
+  transform: scale(1.1);
+}
+
+.edit-btn:active {
+  transform: scale(0.95);
+}
+
+.delete-btn {
+  width: 28px;
+  height: 28px;
+  background: #F4C5D0;
+  border: none;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #E8A5B8;
+  transform: scale(1.1);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+  .task-item {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .task-text {
+    font-size: 15px;
+  }
+
+  .task-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+}

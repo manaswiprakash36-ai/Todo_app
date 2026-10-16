@@ -1,0 +1,78 @@
+.todo-card {
+  width: 470px;
+  background: #FFF8E9;
+  border: 3px double #F4C5D0;
+  border-radius: 30px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 40px rgba(244, 197, 208, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #BD8197;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .todo-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+    gap: 20px;
+  }
+
+  .card-header h1 {
+    font-size: 36px;
+  }
+}
+/* 🔥 FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: #e9ecef;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background: #dee2e6;
+}
+
+.filter-btn.active {
+  background: #F4C5D0;
+  color: white;
+  border-color: #F4C5D0;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

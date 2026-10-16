@@ -1,0 +1,46 @@
+.teddy-container {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+}
+
+.teddy-bear {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(189, 129, 151, 0.2));
+}
+
+.tiny-star {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  font-size: 18px;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .teddy-container {
+    width: 70px;
+    height: 70px;
+    top: -20px;
+    right: 15px;
+  }
+
+  .tiny-star {
+    font-size: 14px;
+  }
+}
